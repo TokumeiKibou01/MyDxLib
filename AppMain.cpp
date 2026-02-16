@@ -1,7 +1,7 @@
 #include <DxLib.h>
-#include "BoxObject.h"
 #include <vector>
-#include "ObjectManager.h"
+#include "Manager/ObjectManager.h"
+#include "Object/BoxObject.h"
 
 int InitApp();
 

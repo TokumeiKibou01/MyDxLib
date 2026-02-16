@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "Base2DObject.h"
+#include "../Object/Base2DObject.h"
 
 class ObjectManager {
 private:

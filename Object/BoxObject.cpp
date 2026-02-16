@@ -1,5 +1,7 @@
 #include "BoxObject.h"
 #include <DxLib.h>
+#include "../Library/Location2D.h"
+#include "../Library/Vector2D.h"
 
 BoxObject::BoxObject(const Location2D& loc, const Vector2D& vec)
     : Base2DObject("Box", loc, vec, true) {

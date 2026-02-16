@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
-#include "Location2D.h"
-#include "Vector2D.h"
+#include "../Library/Location2D.h"
+#include "../Library/Vector2D.h"
 
 class Base2DObject {
 protected:

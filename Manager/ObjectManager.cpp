@@ -1,4 +1,5 @@
-#include "ObjectManager.h"
+#include "../Manager/ObjectManager.h"
+#include "../Object/Base2DObject.h"
 
 ObjectManager ObjectManager::GetInstance() {
     static ObjectManager manager;
