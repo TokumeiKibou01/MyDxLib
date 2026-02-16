@@ -130,6 +130,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AppMain.cpp" />
+    <ClCompile Include="Base2DObject.cpp" />
+    <ClCompile Include="BaseScene.cpp" />
+    <ClCompile Include="BoxObject.cpp" />
+    <ClCompile Include="Location2D.cpp" />
+    <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="Vector2D.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base2DObject.h" />
+    <ClInclude Include="BaseScene.h" />
+    <ClInclude Include="BoxObject.h" />
+    <ClInclude Include="Location2D.h" />
+    <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="Vector2D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
