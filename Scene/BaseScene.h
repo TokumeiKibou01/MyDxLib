@@ -10,5 +10,7 @@ public:
     virtual void Draw() = 0;
     virtual void Init() = 0;
     virtual void Release() = 0;
+
+    std::string GetName();
 };
 
