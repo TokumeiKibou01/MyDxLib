@@ -9,7 +9,6 @@ int InitApp();
 namespace {
     SceneManager& sceneManager = SceneManager::GetInstance();
     ObjectManager objManager = ObjectManager::GetInstance();
-    BoxObject* boxObj = new BoxObject(Location2D(100.0f, 100.0f ), Vector2D(0.0f, 0.0f));
 }
 
 int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow) {
@@ -48,8 +47,6 @@ int InitApp() {
 		return -1;
 	}
 	SetDrawScreen(DX_SCREEN_BACK);
-
-    objManager.AddObject(boxObj);
 
 	return 0;
 }
