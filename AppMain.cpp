@@ -2,10 +2,12 @@
 #include <vector>
 #include "Manager/ObjectManager.h"
 #include "Object/BoxObject.h"
+#include "Manager/SceneManager.h"
 
 int InitApp();
 
 namespace {
+    SceneManager& sceneManager = SceneManager::GetInstance();
     ObjectManager objManager = ObjectManager::GetInstance();
     BoxObject* boxObj = new BoxObject(Location2D(100.0f, 100.0f ), Vector2D(0.0f, 0.0f));
 }
@@ -18,8 +20,8 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	while (true) {
 		ClearDrawScreen();
 
-        objManager.UpdateObjects();
-        objManager.DrawObjects();
+        sceneManager.UpdateScene();
+        sceneManager.DrawScene();
 
         ScreenFlip();
         WaitTimer(16);

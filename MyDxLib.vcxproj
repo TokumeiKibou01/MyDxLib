@@ -135,18 +135,22 @@
     <ClInclude Include="Library\Location2D.h" />
     <ClInclude Include="Library\Vector2D.h" />
     <ClInclude Include="Manager\ObjectManager.h" />
+    <ClInclude Include="Manager\SceneManager.h" />
     <ClInclude Include="Object\Base2DObject.h" />
     <ClInclude Include="Object\BoxObject.h" />
     <ClInclude Include="Scene\BaseScene.h" />
+    <ClInclude Include="Scene\BootScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AppMain.cpp" />
     <ClCompile Include="Library\Location2D.cpp" />
     <ClCompile Include="Library\Vector2D.cpp" />
     <ClCompile Include="Manager\ObjectManager.cpp" />
+    <ClCompile Include="Manager\SceneManager.cpp" />
     <ClCompile Include="Object\Base2DObject.cpp" />
     <ClCompile Include="Object\BoxObject.cpp" />
     <ClCompile Include="Scene\BaseScene.cpp" />
+    <ClCompile Include="Scene\BootScene.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
