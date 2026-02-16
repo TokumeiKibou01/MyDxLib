@@ -3,6 +3,11 @@
 ## 概要
 * ゲームを作る際のクラス等をまとめたテンプレートです。
 
+## 使用方法
+1.　git clone https://github.com/TokumeiKibou01/MyDxLib.git と打つ。<br/>
+2.　VisualStudioでクローンしたプロジェクトを開く。<br>
+3.　クラスを拡張して、ゲームを作る。
+
 ## 使用ライブラリ
 * DxLib
 
