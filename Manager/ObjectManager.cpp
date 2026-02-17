@@ -16,6 +16,16 @@ void ObjectManager::AddObject(std::string sceneName, Base2DObject* obj) {
 }
 
 void ObjectManager::RemoveObject(std::string sceneName, Base2DObject* obj) {
+    std::vector<Base2DObject*>& sceneObjVector = objEachSceneMap.at(sceneName);
+    for (auto it = sceneObjVector.begin(); it != sceneObjVector.end(); ) {
+        if ((*it) == obj) {
+            delete *it;
+            it = sceneObjVector.erase(it);
+        }
+        else {
+            it++;
+        }
+    }
 }
 
 void ObjectManager::UpdateObject(std::string sceneName) {
