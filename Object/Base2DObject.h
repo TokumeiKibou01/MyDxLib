@@ -16,5 +16,12 @@ public:
 
     virtual void Update() = 0;
     virtual void Draw() = 0;
+
+    Location2D GetLocation() { return location_; };
+    void SetLocation(const Location2D& loc) { location_ = loc; };
+    Vector2D GetVector() { return vector_;  };
+    void SetVector(const Vector2D& vec) { vector_ = vec; };
+
+    bool IsAlive() const { return isAlive_; };
 };
 
