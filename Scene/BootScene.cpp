@@ -3,6 +3,7 @@
 #include "../Object/BoxObject.h"
 #include "../Manager/ObjectManager.h"
 #include <DxLib.h>
+#include "../Library/Location2D.h"
 
 BootScene::BootScene()
     : BaseScene("BootScene") {
@@ -14,6 +15,11 @@ BootScene::~BootScene() {
 
 void BootScene::Update() {
     ObjectManager::GetInstance().UpdateObject(GetName());
+    auto obj = ObjectManager::GetInstance().GetDrawObject<BoxObject>(GetName());
+
+    Location2D loc = obj->GetLocation();
+    loc.x_ += 5;
+    obj->SetLocation(loc);
 
     counter_++;
 }
