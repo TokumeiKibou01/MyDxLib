@@ -1,6 +1,8 @@
 #include "DebugWin32Window.h"
 #include <thread>
 
+#define BUTTON_ID 100
+
 DebugWin32Window::DebugWin32Window()
 {
     isRunning = false;
@@ -49,6 +51,19 @@ int DebugWin32Window::initWindow(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR
         hInstance,
         NULL
     );
+
+    HWND hwndButton = CreateWindow(
+        "BUTTON",  // クラス名（※ボタンなので、BUTTON）
+        "クリック",      // ボタンに表示するテキスト
+        WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,  // スタイル
+        10,         // X座標 
+        10,         // Y座標 
+        100,        // ボタンの幅
+        100,        // ボタンの高さ
+        hwnd,     // 親のウインドウハンドル
+        (HMENU) BUTTON_ID,       // ボタンID
+        (HINSTANCE)GetWindowLongPtr(hwnd, GWLP_HINSTANCE),
+        NULL);
     if (hwnd == nullptr) {
         return -1;
     }
@@ -75,6 +90,13 @@ LRESULT DebugWin32Window::WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPa
         PostQuitMessage(0);
         return 0;
     case WM_COMMAND:
+        switch (LOWORD(wParam)) {
+        case BUTTON_ID:
+            PostQuitMessage(0);
+            break;
+        default:
+            break;
+        }
         break;
     default:
         break;
