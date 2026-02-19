@@ -21,6 +21,9 @@
 ### ライブラリー
 「Location2D.cpp/h」- 2D座標を扱うクラス。<br>
 「Vector2D.cpp/h」 - 2Dベクトルを扱うクラス。<br>
+#### デバック
+「DebugWindow/ImGUI」- デバックウインドウ用のImGUI（※推奨）。<br>
+「DebugWindow/Win32」- デバックウインドウ用のWin32API（※非推奨）。<br>
 
 ### オブジェクト
 「Base2DObject.cpp/h」- 2Dオブジェクトの基底クラス。<br>
