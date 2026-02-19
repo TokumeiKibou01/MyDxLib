@@ -58,9 +58,6 @@
     <ClInclude Include="MathUtil.h">
       <Filter>Library</Filter>
     </ClInclude>
-    <ClInclude Include="DebugWin32Window.h">
-      <Filter>Debug\Win32</Filter>
-    </ClInclude>
     <ClInclude Include="DebugWindow\ImGUI\imconfig.h">
       <Filter>Debug\ImGUI</Filter>
     </ClInclude>
@@ -94,6 +91,9 @@
     <ClInclude Include="DebugWindow\ImGUI\imstb_truetype.h">
       <Filter>Debug\ImGUI</Filter>
     </ClInclude>
+    <ClInclude Include="DebugWindow\Win32\DebugWin32Window.h">
+      <Filter>Debug\Win32</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Library\Vector2D.cpp">
@@ -122,9 +122,6 @@
     </ClCompile>
     <ClCompile Include="Scene\BootScene.cpp">
       <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="DebugWin32Window.cpp">
-      <Filter>Debug\Win32</Filter>
     </ClCompile>
     <ClCompile Include="DebugWindow\ImGUI\imgui.cpp">
       <Filter>Debug\ImGUI</Filter>
@@ -155,6 +152,9 @@
     </ClCompile>
     <ClCompile Include="DebugWindow\ImGUI\imgui_widgets.cpp">
       <Filter>Debug\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow\Win32\DebugWin32Window.cpp">
+      <Filter>Debug\Win32</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

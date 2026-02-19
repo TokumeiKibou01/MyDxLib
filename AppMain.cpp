@@ -3,7 +3,7 @@
 #include "Manager/ObjectManager.h"
 #include "Object/BoxObject.h"
 #include "Manager/SceneManager.h"
-#include "DebugWin32Window.h"
+#include "DebugWindow/Win32/DebugWin32Window.h"
 #include <thread>
 #include "DebugWindow/ImGUI/imgui.h"
 #include "DebugWindow/ImGUI/imgui_impl_dx11.h"
