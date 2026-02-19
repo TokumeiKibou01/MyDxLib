@@ -102,7 +102,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);IMGUI_IMPL_WIN32_DISABLE_GAMEPAD</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\DxLib_VC\プロジェクトに追加すべきファイル_VC用</AdditionalIncludeDirectories>
     </ClCompile>
@@ -110,6 +110,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\DxLib_VC\プロジェクトに追加すべきファイル_VC用</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);dxgi.lib;d3d12.lib;d3dcompiler.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -134,6 +135,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DebugWin32Window.h" />
+    <ClInclude Include="DebugWindow\ImGUI\imconfig.h" />
+    <ClInclude Include="DebugWindow\ImGUI\imgui.h" />
+    <ClInclude Include="DebugWindow\ImGUI\imgui_impl_dx10.h" />
+    <ClInclude Include="DebugWindow\ImGUI\imgui_impl_dx11.h" />
+    <ClInclude Include="DebugWindow\ImGUI\imgui_impl_dx12.h" />
+    <ClInclude Include="DebugWindow\ImGUI\imgui_impl_dx9.h" />
+    <ClInclude Include="DebugWindow\ImGUI\imgui_impl_win32.h" />
+    <ClInclude Include="DebugWindow\ImGUI\imgui_internal.h" />
+    <ClInclude Include="DebugWindow\ImGUI\imstb_rectpack.h" />
+    <ClInclude Include="DebugWindow\ImGUI\imstb_textedit.h" />
+    <ClInclude Include="DebugWindow\ImGUI\imstb_truetype.h" />
     <ClInclude Include="Library\Location2D.h" />
     <ClInclude Include="Library\Vector2D.h" />
     <ClInclude Include="Manager\ObjectManager.h" />
@@ -147,6 +159,16 @@
   <ItemGroup>
     <ClCompile Include="AppMain.cpp" />
     <ClCompile Include="DebugWin32Window.cpp" />
+    <ClCompile Include="DebugWindow\ImGUI\imgui.cpp" />
+    <ClCompile Include="DebugWindow\ImGUI\imgui_demo.cpp" />
+    <ClCompile Include="DebugWindow\ImGUI\imgui_draw.cpp" />
+    <ClCompile Include="DebugWindow\ImGUI\imgui_impl_dx10.cpp" />
+    <ClCompile Include="DebugWindow\ImGUI\imgui_impl_dx11.cpp" />
+    <ClCompile Include="DebugWindow\ImGUI\imgui_impl_dx12.cpp" />
+    <ClCompile Include="DebugWindow\ImGUI\imgui_impl_dx9.cpp" />
+    <ClCompile Include="DebugWindow\ImGUI\imgui_impl_win32.cpp" />
+    <ClCompile Include="DebugWindow\ImGUI\imgui_tables.cpp" />
+    <ClCompile Include="DebugWindow\ImGUI\imgui_widgets.cpp" />
     <ClCompile Include="Library\Location2D.cpp" />
     <ClCompile Include="Library\Vector2D.cpp" />
     <ClCompile Include="Manager\ObjectManager.cpp" />

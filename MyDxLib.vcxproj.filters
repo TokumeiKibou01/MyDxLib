@@ -61,6 +61,39 @@
     <ClInclude Include="DebugWin32Window.h">
       <Filter>Debug\Win32</Filter>
     </ClInclude>
+    <ClInclude Include="DebugWindow\ImGUI\imconfig.h">
+      <Filter>Debug\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWindow\ImGUI\imgui.h">
+      <Filter>Debug\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWindow\ImGUI\imgui_impl_dx9.h">
+      <Filter>Debug\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWindow\ImGUI\imgui_impl_dx10.h">
+      <Filter>Debug\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWindow\ImGUI\imgui_impl_dx11.h">
+      <Filter>Debug\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWindow\ImGUI\imgui_impl_dx12.h">
+      <Filter>Debug\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWindow\ImGUI\imgui_impl_win32.h">
+      <Filter>Debug\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWindow\ImGUI\imgui_internal.h">
+      <Filter>Debug\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWindow\ImGUI\imstb_rectpack.h">
+      <Filter>Debug\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWindow\ImGUI\imstb_textedit.h">
+      <Filter>Debug\ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWindow\ImGUI\imstb_truetype.h">
+      <Filter>Debug\ImGUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Library\Vector2D.cpp">
@@ -92,6 +125,36 @@
     </ClCompile>
     <ClCompile Include="DebugWin32Window.cpp">
       <Filter>Debug\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow\ImGUI\imgui.cpp">
+      <Filter>Debug\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow\ImGUI\imgui_demo.cpp">
+      <Filter>Debug\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow\ImGUI\imgui_draw.cpp">
+      <Filter>Debug\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow\ImGUI\imgui_impl_dx9.cpp">
+      <Filter>Debug\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow\ImGUI\imgui_impl_dx10.cpp">
+      <Filter>Debug\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow\ImGUI\imgui_impl_dx11.cpp">
+      <Filter>Debug\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow\ImGUI\imgui_impl_dx12.cpp">
+      <Filter>Debug\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow\ImGUI\imgui_impl_win32.cpp">
+      <Filter>Debug\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow\ImGUI\imgui_tables.cpp">
+      <Filter>Debug\ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWindow\ImGUI\imgui_widgets.cpp">
+      <Filter>Debug\ImGUI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

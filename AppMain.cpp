@@ -5,8 +5,12 @@
 #include "Manager/SceneManager.h"
 #include "DebugWin32Window.h"
 #include <thread>
+#include "DebugWindow/ImGUI/imgui.h"
+#include "DebugWindow/ImGUI/imgui_impl_dx11.h"
+#include "DebugWindow/ImGUI/imgui_impl_win32.h"
 
 int InitApp();
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 namespace {
     SceneManager& sceneManager = SceneManager::GetInstance();
@@ -23,8 +27,24 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	while (true) {
 		ClearDrawScreen();
 
+        ImGui_ImplDX11_NewFrame();
+        ImGui_ImplWin32_NewFrame();
+        ImGui::NewFrame();
+
         sceneManager.UpdateScene();
         sceneManager.DrawScene();
+
+        ImGui::Begin("Debug");
+        ImGui::End();
+
+        ImGui::EndFrame();
+        ImGui::Render();
+        ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+        RefreshDxLibDirect3DSetting();
+        if (ImGui::GetIO().ConfigFlags & ImGuiConfigFlags_ViewportsEnable) {
+            ImGui::UpdatePlatformWindows();
+            ImGui::RenderPlatformWindowsDefault();
+        }
 
         ScreenFlip();
         WaitTimer(16);
@@ -32,6 +52,9 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 			break;
 		}
 	}
+    ImGui_ImplDX11_Shutdown();
+    ImGui_ImplWin32_Shutdown();
+    ImGui::DestroyContext();
 	DxLib_End();
 	return 0;
 }
@@ -54,5 +77,22 @@ int InitApp() {
     SetAlwaysRunFlag(TRUE);
     SetUseZBuffer3D(TRUE);
     SetWriteZBuffer3D(TRUE); 
+    SetUseHookWinProcReturnValue(FALSE);
+
+    SetHookWinProc([](HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) -> LRESULT {       
+        return ImGui_ImplWin32_WndProcHandler(hwnd, msg, wParam, lParam);
+    });
+
+    ImGui::CreateContext();
+    auto& io = ImGui::GetIO();
+    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+    io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
+
+    ImGui::StyleColorsDark();
+    ImGui_ImplWin32_Init(GetMainWindowHandle());
+    ID3D11Device* device = (ID3D11Device*) GetUseDirect3D11Device();
+    ID3D11DeviceContext* deviceContext = (ID3D11DeviceContext*) GetUseDirect3D11DeviceContext();
+    ImGui_ImplDX11_Init(device, deviceContext);
+    
 	return 0;
 }
