@@ -1,4 +1,5 @@
 #include "DebugWin32Window.h"
+#include <thread>
 
 DebugWin32Window::DebugWin32Window()
 {
@@ -7,6 +8,15 @@ DebugWin32Window::DebugWin32Window()
 
 DebugWin32Window::~DebugWin32Window()
 {
+}
+
+void DebugWin32Window::runThread(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR lpCmdLine, int nCmdShow) {
+    std::thread thread([=]() {
+        this->initWindow(hInstance, hPrevInst, lpCmdLine, nCmdShow);
+        }
+    );
+
+    thread.detach(); // スレッドを手放す（※独立して動く）
 }
 
 int DebugWin32Window::initWindow(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR lpCmdLine, int nCmdShow) {

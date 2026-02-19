@@ -4,6 +4,7 @@
 #include "Object/BoxObject.h"
 #include "Manager/SceneManager.h"
 #include "DebugWin32Window.h"
+#include <thread>
 
 int InitApp();
 
@@ -16,7 +17,8 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	if (InitApp() != 0) {
 		return -1;
 	}
-    DebugWin32Window::GetInstance().initWindow(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+
+    DebugWin32Window::GetInstance().runThread(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 	
 	while (true) {
 		ClearDrawScreen();
