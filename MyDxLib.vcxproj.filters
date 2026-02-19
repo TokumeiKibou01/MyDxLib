@@ -20,6 +20,15 @@
     <Filter Include="Object">
       <UniqueIdentifier>{65145e32-37fa-442c-9c1c-aaae3d53387d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{5de2a840-0fba-424d-8e84-5573288158d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debug\ImGUI">
+      <UniqueIdentifier>{29ddd6a7-cf26-4874-a519-5267fc1245d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debug\Win32">
+      <UniqueIdentifier>{411a93c3-1373-45f6-9eef-85ee7ff35d0a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Library\Location2D.h">
@@ -45,6 +54,12 @@
     </ClInclude>
     <ClInclude Include="Scene\BootScene.h">
       <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtil.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugWin32Window.h">
+      <Filter>Debug\Win32</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +89,9 @@
     </ClCompile>
     <ClCompile Include="Scene\BootScene.cpp">
       <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugWin32Window.cpp">
+      <Filter>Debug\Win32</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

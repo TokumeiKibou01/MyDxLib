@@ -133,10 +133,12 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DebugWin32Window.h" />
     <ClInclude Include="Library\Location2D.h" />
     <ClInclude Include="Library\Vector2D.h" />
     <ClInclude Include="Manager\ObjectManager.h" />
     <ClInclude Include="Manager\SceneManager.h" />
+    <ClInclude Include="MathUtil.h" />
     <ClInclude Include="Object\Base2DObject.h" />
     <ClInclude Include="Object\BoxObject.h" />
     <ClInclude Include="Scene\BaseScene.h" />
@@ -144,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AppMain.cpp" />
+    <ClCompile Include="DebugWin32Window.cpp" />
     <ClCompile Include="Library\Location2D.cpp" />
     <ClCompile Include="Library\Vector2D.cpp" />
     <ClCompile Include="Manager\ObjectManager.cpp" />

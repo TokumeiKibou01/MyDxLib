@@ -3,6 +3,7 @@
 #include "Manager/ObjectManager.h"
 #include "Object/BoxObject.h"
 #include "Manager/SceneManager.h"
+#include "DebugWin32Window.h"
 
 int InitApp();
 
@@ -15,6 +16,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	if (InitApp() != 0) {
 		return -1;
 	}
+    DebugWin32Window::GetInstance().initWindow(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 	
 	while (true) {
 		ClearDrawScreen();
@@ -47,6 +49,8 @@ int InitApp() {
 		return -1;
 	}
 	SetDrawScreen(DX_SCREEN_BACK);
-
+    SetAlwaysRunFlag(TRUE);
+    SetUseZBuffer3D(TRUE);
+    SetWriteZBuffer3D(TRUE); 
 	return 0;
 }
