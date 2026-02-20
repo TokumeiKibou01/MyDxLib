@@ -152,6 +152,7 @@
     <ClInclude Include="Manager\SceneManager.h" />
     <ClInclude Include="MathUtil.h" />
     <ClInclude Include="Object\Base2DObject.h" />
+    <ClInclude Include="Object\BaseObject.h" />
     <ClInclude Include="Object\BoxObject.h" />
     <ClInclude Include="Scene\BaseScene.h" />
     <ClInclude Include="Scene\BootScene.h" />
@@ -174,6 +175,7 @@
     <ClCompile Include="Manager\ObjectManager.cpp" />
     <ClCompile Include="Manager\SceneManager.cpp" />
     <ClCompile Include="Object\Base2DObject.cpp" />
+    <ClCompile Include="Object\BaseObject.cpp" />
     <ClCompile Include="Object\BoxObject.cpp" />
     <ClCompile Include="Scene\BaseScene.cpp" />
     <ClCompile Include="Scene\BootScene.cpp" />

@@ -94,6 +94,9 @@
     <ClInclude Include="DebugWindow\Win32\DebugWin32Window.h">
       <Filter>Debug\Win32</Filter>
     </ClInclude>
+    <ClInclude Include="Object\BaseObject.h">
+      <Filter>Object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Library\Vector2D.cpp">
@@ -155,6 +158,9 @@
     </ClCompile>
     <ClCompile Include="DebugWindow\Win32\DebugWin32Window.cpp">
       <Filter>Debug\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\BaseObject.cpp">
+      <Filter>Object</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
