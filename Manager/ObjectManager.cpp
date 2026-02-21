@@ -1,5 +1,5 @@
 #include "../Manager/ObjectManager.h"
-#include "../Object/Base2DObject.h"
+#include "../Object/BaseObject.h"
 #include <string>
 
 ObjectManager& ObjectManager::GetInstance() {
@@ -7,16 +7,16 @@ ObjectManager& ObjectManager::GetInstance() {
     return manager;
 }
 
-void ObjectManager::AddObject(std::string sceneName, Base2DObject* obj) {
+void ObjectManager::AddObject(std::string sceneName, BaseObject* obj) {
     if (objEachSceneMap.find(sceneName) == objEachSceneMap.end()) {
-        objEachSceneMap[sceneName] = std::vector<Base2DObject*>();
+        objEachSceneMap[sceneName] = std::vector<BaseObject*>();
     }
-    std::vector<Base2DObject*>& sceneObjVector = objEachSceneMap.at(sceneName);
+    std::vector<BaseObject*>& sceneObjVector = objEachSceneMap.at(sceneName);
     sceneObjVector.push_back(obj);
 }
 
-void ObjectManager::RemoveObject(std::string sceneName, Base2DObject* obj) {
-    std::vector<Base2DObject*>& sceneObjVector = objEachSceneMap.at(sceneName);
+void ObjectManager::RemoveObject(std::string sceneName, BaseObject* obj) {
+    std::vector<BaseObject*>& sceneObjVector = objEachSceneMap.at(sceneName);
     for (auto it = sceneObjVector.begin(); it != sceneObjVector.end(); ) {
         if ((*it) == obj) {
             delete *it;
