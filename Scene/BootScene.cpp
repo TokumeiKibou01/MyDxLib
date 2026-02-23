@@ -4,6 +4,7 @@
 #include "../Manager/ObjectManager.h"
 #include <DxLib.h>
 #include "../Library/Location2D.h"
+#include "../Manager/AudioManager.h"
 
 BootScene::BootScene()
     : BaseScene("BootScene") {
@@ -35,6 +36,9 @@ void BootScene::Init() {
 
     ObjectManager& objManager = ObjectManager::GetInstance();
     objManager.AddObject(GetName(), new BoxObject(Location2D(100.0f, 100.0f), Vector2D(0.0f, 0.0f)));
+
+    AudioManager& audioManager = AudioManager::GetInstance();
+    audioManager.PlayAudio("Bossa_Latte.mp3");
 }
 
 void BootScene::Release() {

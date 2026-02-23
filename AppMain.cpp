@@ -8,6 +8,7 @@
 #include "DebugWindow/ImGUI/imgui.h"
 #include "DebugWindow/ImGUI/imgui_impl_dx11.h"
 #include "DebugWindow/ImGUI/imgui_impl_win32.h"
+#include "Manager/AudioManager.h"
 
 int InitApp();
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -82,6 +83,8 @@ int InitApp() {
     SetHookWinProc([](HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) -> LRESULT {       
         return ImGui_ImplWin32_WndProcHandler(hwnd, msg, wParam, lParam);
     });
+
+    AudioManager::GetInstance().Init();
 
     ImGui::CreateContext();
     auto& io = ImGui::GetIO();

@@ -55,9 +55,6 @@
     <ClInclude Include="Scene\BootScene.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="MathUtil.h">
-      <Filter>Library</Filter>
-    </ClInclude>
     <ClInclude Include="DebugWindow\ImGUI\imconfig.h">
       <Filter>Debug\ImGUI</Filter>
     </ClInclude>
@@ -96,6 +93,12 @@
     </ClInclude>
     <ClInclude Include="Object\BaseObject.h">
       <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtil.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\AudioManager.h">
+      <Filter>Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +164,9 @@
     </ClCompile>
     <ClCompile Include="Object\BaseObject.cpp">
       <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\AudioManager.cpp">
+      <Filter>Manager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
